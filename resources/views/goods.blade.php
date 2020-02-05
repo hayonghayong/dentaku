@@ -53,7 +53,7 @@
 <input type="text" name="name" class="form-control">
 重さ
 <input type="text" name="weight" class="form-control">
-<button type="submit" class="btn btn-primary"> Save
+<button type="submit" class="btn btn-info"> Save
 </button>
 </form>
 
@@ -126,6 +126,7 @@ $(function(){
     });
 });
 </script>
+
 @endif
 @endsection
 
