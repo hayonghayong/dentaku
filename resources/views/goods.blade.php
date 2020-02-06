@@ -1,8 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
- {{ Auth::user()->name }} さんの便利電卓
-<br>
+
 <!-- 電卓 -->
 <div class="container"></div>
 <table border="1" cellspacing="0">
