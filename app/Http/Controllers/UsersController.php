@@ -33,7 +33,6 @@ if ($validator->fails()) { return redirect('/')
 $users = User::where('id',Auth::user()->id)->find($request->id);
 $users->name = $request->name; 
 $users->email = $request->email; 
-$users->password = bcrypt($request->password);
 $users->save();  
 return redirect('/');}
 

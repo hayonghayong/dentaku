@@ -49,10 +49,16 @@
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             {{ csrf_field() }}
                             </form>
-
-                            <form action="{{ url('usersedit/'.Auth::user()->id) }}" method="POST">
+                            <a href="{{url('goodsnew')}}">
+                                新規物品登録画面
+                            </a>
+                            <a href="{{url('usersedit/'.Auth::user()->id)}}"
+                                onclick="event.preventDefault();
+                                document.getElementById('useredit').submit();">
+                                会員情報更新 
+                            </a>
+                            <form id="useredit" action="{{ url('usersedit/'.Auth::user()->id) }}" method="POST">
                             {{ csrf_field() }}
-                            更新 
                             </form>
                         </li>
                     </ul>

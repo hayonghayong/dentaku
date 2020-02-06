@@ -16,9 +16,7 @@ $this->middleware('auth'); }
 
 //表示
 public function index() {
-    // $goods = Good::orderBy('created_at', 'asc')->get();
 $goods = Good::where('user_id',Auth::user()->id) ->orderBy('created_at', 'desc')->get();
-// $auths=Auth::user();
  return view('goods', [
 'goods' => $goods ]);
 }
@@ -39,7 +37,11 @@ $goods->weight = $request->weight;
 $goods->save();  
 return redirect('/');}
 
-//登録
+//新規登録画面
+public function show() {
+return view('goodsnew') ;}
+
+//新規登録
 public function store(Request $request) {
 $validator = Validator::make($request->all(), [ 
     'name' => 'required|max:10',
