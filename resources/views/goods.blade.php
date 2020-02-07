@@ -1,11 +1,7 @@
-@extends('layouts.app')
-@section('content')
 
- {{ Auth::user()->name }} さんの便利電卓
-<br>
+@include('layouts.app')
 <!-- 電卓 -->
-<div class="container"></div>
-<table border="1" cellspacing="0">
+<table border="1" cellspacing="0"width="80%" height="300px">
     <tr>
         <td colspan="4">
             <input id="inputLabel">
@@ -43,19 +39,6 @@
         </tr>
     </table>
 </div>
-
- 新規物品登録画面
-
-<!-- 登録フォーム -->
-<form action="{{ url('goods') }}" method="POST" class="form- horizontal">
-{{ csrf_field() }}
-物品名
-<input type="text" name="name" class="form-control">
-重さ
-<input type="text" name="weight" class="form-control">
-<button type="submit" class="btn btn-primary"> Save
-</button>
-</form>
 
 <!-- 表示 -->
 @if (count($goods) > 0)
@@ -128,6 +111,5 @@ $(function(){
 </script>
 
 @endif
-@endsection
 
 

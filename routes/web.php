@@ -11,16 +11,19 @@ Route::get('/','GoodsController@index');
 Auth::routes(); 
 Route::get('/home','GoodsController@index')->name('home');
 
-// 登録
+//物品登録画面表示
+Route::get('/goodsnew', 'GoodsController@show');
+
+// 物品登録
 Route::post('/goods','GoodsController@store');
 
-// 削除
+// 物品削除
 Route::delete('/good/{good}','GoodsController@destroy');
 
-//更新画面
+//物品更新画面表示
 Route::post('/goodsedit/{goods}','GoodsController@edit');
 
-// 更新
+// 物品更新
 Route::post('/goods/update','GoodsController@update');
 
 // 一時保存登録
