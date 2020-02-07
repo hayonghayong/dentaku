@@ -1,7 +1,7 @@
 
 @include('layouts.app')
 <!-- 電卓 -->
-<table border="1" cellspacing="0"width="80%" height="300px">
+<table >
     <tr>
         <td colspan="4">
             <input id="inputLabel">
@@ -42,43 +42,19 @@
 
 <!-- 表示 -->
 @if (count($goods) > 0)
-<!-- @if ($goods->count() > 0) -->
-登録物品一覧
-<table class="table table-striped task-table">
-<tbody>
+<div class="ichiran">
+<p class="title">登録物品一覧</p>
 @foreach ($goods as $good)
-<tr>
-<td class="table-text">
 <div class="text"id='{{ $good->weight }}'> {{ $good->name }}
 </div> 
-</td>
-
-<!-- 更新ボタン -->
-<td>
-<form action="{{ url('goodsedit/'.$good->id) }}" method="POST"> {{ csrf_field() }}
-<button type="submit" class="btn btn-primary">
-更新 
-</button>
-</form>
-</td>
-
-<!--削除ボタン --> 
-<td>
-<form action="{{ url('good/'.$good->id) }}" method="POST"> {{ csrf_field() }}
-{{ method_field('DELETE') }}
-<button type="submit" class="btn btn-danger"> 削除
-</button>
-</form>
-</td> 
-</tr>
 @endforeach
-</tbody> 
-</table>
+</div>
 @endif
 
-一時保存
-<div class="ichiji_save">
-</div>
+<p class="title">一時保存</p>
+<p id="allClear">全て削除</p>
+<div class="ichiji_save"></div>
+
 
 <!-- Jquery -->
 <script>
@@ -110,6 +86,5 @@ $(function(){
 });
 </script>
 
-@endif
 
 

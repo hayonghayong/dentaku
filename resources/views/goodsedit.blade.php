@@ -1,6 +1,4 @@
 @extends('layouts.app')
-@section('content')
-
 <!-- 更新画面 -->
 <form action="{{ url('goods/update') }}" method="POST">
 <div>
@@ -27,4 +25,3 @@
 </form>
 </div> 
 </div>
-@endsection

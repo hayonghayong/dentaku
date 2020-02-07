@@ -73,9 +73,9 @@
                                 </button>
 
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    パスワードを忘れた方はこちら
-                                <p a href="{{ route('register') }}">新規会員登録はこちら</a></p>
-                                </a>
+                                    パスワードを忘れた方はこちら</a>
+                                <a href="{{ route('register') }}">新規会員登録はこちら</a>
+                                
                             </div>
                         </div>
                     </form>
