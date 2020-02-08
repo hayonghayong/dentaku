@@ -1,6 +1,4 @@
 @extends('layouts.app')
-@section('content')
-
 <!-- 更新画面 -->
 <form action="{{ url('goods') }}" method="POST" class="form- horizontal">
 {{ csrf_field() }}
@@ -22,4 +20,3 @@
 </a> 
 </div> 
 </div>
-@endsection

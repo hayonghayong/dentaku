@@ -4,7 +4,7 @@ use App\Good;
 use App\User;
 use Illuminate\Http\Request;
 
-//表示
+//トップ画面表示
 Route::get('/','GoodsController@index');
 
 //認証機能
@@ -16,6 +16,9 @@ Route::get('/goodsnew', 'GoodsController@show');
 
 // 物品登録
 Route::post('/goods','GoodsController@store');
+
+//物品一覧画面表示
+Route::get('/goodsall', 'GoodsController@all');
 
 // 物品削除
 Route::delete('/good/{good}','GoodsController@destroy');

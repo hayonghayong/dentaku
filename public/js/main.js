@@ -34,26 +34,29 @@ $(function () {
     var today = new Date();
     var inputLabel = $('#inputLabel');
     localStorage.setItem(today, pushed);
-    const html = '<tr><td class="ichiji">' + pushed + '<button id="save_clear">削除</button>' + '</td></tr>';
+    const html = '<span class="ichiji">' + pushed + '</span>';
     $(".ichiji_save").append(html);
     inputLabel.val('0');
-
+  
     // 一時保存削除
-      $("#save_clear").on("click",function () {
-        localStorage.removeItem(today);
-        $(".ichiji").empty();
-      });
+    $("#allClear").on("click", function () {
+      localStorage.removeItem(today);
+      $(".ichiji_save").empty();
+    });
 
     // 一時保存を電卓に表示
-      $(".ichiji").click(function () {
-        let save_text = $(this).text();
-        console.log(save_text);
-        let str = save_text.replace("削除","");
-        console.log(str);
-        $("#inputLabel").val(str);
-      });
+    $(".ichiji").click(function () {
+      let save_text = $(this).text();
+      console.log(save_text);
+      let str = save_text.replace("削除", "");
+      console.log(str);
+      $("#inputLabel").val(str);
     });
   });
+});
+  
+
+  
 
 
 

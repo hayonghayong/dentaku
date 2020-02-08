@@ -15,60 +15,44 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- 自分のCSS -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
+<div class="cp_cont">
+	<div class="cp_offcm01">
+		<input type="checkbox" id="cp_toggle01">
+		<label for="cp_toggle01"><span></span></label>
+		<div class="cp_menu">
+		<ul>
+		<li> <a href="{{url('goodsnew')}}">新規物品登録画面</a></li>
+		<li><a href="{{url('goodsall')}}">登録物品一覧</a></li>
+		<li>
+            <a href="{{url('usersedit/'.Auth::user()->id)}}"
+            onclick="event.preventDefault();
+            document.getElementById('useredit').submit();">
+            会員情報更新 
+            </a>
+            <form id="useredit" action="{{ url('usersedit/'.Auth::user()->id) }}" method="POST">
+            {{ csrf_field() }}
+            </form>
+        </li>
+		<li>
+            <a href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();">
+            ログアウト
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            {{ csrf_field() }}
+            </form>
+        </li>
+		</ul>
+		</div>
+	</div>
+	<div class="cp_contents">
+		<p class="title">{{ Auth::user()->name }} さんの便利電卓</p>
+	</div>
 
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                {{ Auth::user()->name }} さんの便利電卓
-
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
-                        <span class="sr-only"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <!-- Branding Image -->
-                </div>
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                                ログアウト
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            {{ csrf_field() }}
-                            </form>
-                            <a href="{{url('goodsnew')}}">
-                                新規物品登録画面
-                            </a>
-                            <a href="{{url('usersedit/'.Auth::user()->id)}}"
-                                onclick="event.preventDefault();
-                                document.getElementById('useredit').submit();">
-                                会員情報更新 
-                            </a>
-                            <form id="useredit" action="{{ url('usersedit/'.Auth::user()->id) }}" method="POST">
-                            {{ csrf_field() }}
-                            </form>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        @yield('content')
-    </div>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
