@@ -6,14 +6,14 @@
 <input type="text" name="name" class="form-control" value="{{$good->name}}">
 </div>
 <div>
-<label for="weight">体重</label>
+<label for="weight">重さ</label>
 <input type="text" name="weight" class="form-control" value="{{$good->weight}}">
 </div>
 
 <!-- Save ボタン/Back ボタン -->
 <div>
-<button type="submit" class="btn btn-primary">Save</button>
-<a class="btn btn-link pull-right" href="{{ url('/') }}"> Back
+<button type="submit" class="btn btn-primary">保存</button>
+<a class="btn btn-link pull-right" href="{{ url('/') }}"> トップページに戻る
 </a> 
 </div>
 <!-- id 値を送信 -->

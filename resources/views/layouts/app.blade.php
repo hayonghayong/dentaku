@@ -17,8 +17,13 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- 自分のCSS -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+    <!-- googlefont -->
+    <link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
+
 </head>
 <body>
+
 <div class="cp_cont">
 	<div class="cp_offcm01">
 		<input type="checkbox" id="cp_toggle01">
@@ -53,6 +58,9 @@
 	<div class="cp_contents">
 		<p class="title">{{ Auth::user()->name }} さんの便利電卓</p>
 	</div>
+    @yield('content')
+</div>
+    
 
 </body>
 </html>
