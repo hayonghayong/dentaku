@@ -1,13 +1,13 @@
-@include('layouts.app')
-
+@extends('layouts.app')
+@section('content')
 <div class="ichiran">
 <p class="title">登録物品一覧</p>
-<table class="table table-striped task-table">
+<table class="table table-striped task-table" id="table">
 <tbody>
 @foreach ($goods as $good)
 <tr>
 <td class="table-text">
-<div class="text"id='{{ $good->weight }}'> {{ $good->name }}
+<div class="allText"id='{{ $good->weight }}'> {{ $good->name }}
 </div> 
 </td>
 
@@ -24,7 +24,7 @@
 <td>
 <form action="{{ url('good/'.$good->id) }}" method="POST"> {{ csrf_field() }}
 {{ method_field('DELETE') }}
-<button type="submit" class="btn btn-danger"> 削除
+<button type="submit" class="danger"> 削除
 </button>
 </form>
 </td> 
@@ -35,3 +35,4 @@
 <a class="btn btn-link pull-right" href="{{ url('/') }}"> トップページに戻る
 </a> 
 </div>
+@endsection

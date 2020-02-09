@@ -1,4 +1,9 @@
-/* ハンバーガー */
+body{
+	background: linear-gradient( #FEFEFD, #F9F6ED) fixed;
+	/* background-color:white; */
+	font-family: "Rounded Mplus 1c"; 
+}
+/* ハンバーガーメニュー */
 *, *:before, *:after {
 	padding: 0;
 	margin: 0;
@@ -27,13 +32,12 @@ a {
 	right: -100vw;
 	width: 250px;
 	height: 100%;
-	cursor: pointer;
 	-webkit-transition: 0.53s transform;
 	        transition: 0.53s transform;
 	-webkit-transition-timing-function: cubic-bezier(.38,.52,.23,.99);
 	        transition-timing-function: cubic-bezier(.38,.52,.23,.99);
-	background-color: #607D8B;
-	opacity: 0.8;
+	background-color:#F9F6ED;
+	opacity: 0.9;
 }
 .cp_offcm01 .cp_menu ul {
 	margin: 0;
@@ -46,8 +50,9 @@ a {
 	display: block;
 	padding: 20px;
 	text-decoration: none;
-	color: #ffffff;
-	border-bottom: 1px solid #ffffff;
+	color:#BAD4F3;
+	border-bottom: 1px solid white;
+	font-size: 20px;
 }
 
 .cp_offcm01 #cp_toggle01 {
@@ -69,8 +74,9 @@ a {
 	-webkit-transition-timing-function: cubic-bezier(.61,-0.38,.37,1.27);
 	        transition-timing-function: cubic-bezier(.61,-0.38,.37,1.27);
 	text-align: center;
-	color: #333333;
+	color:#BAD4F3;
 }
+
 .cp_offcm01 #cp_toggle01:checked ~ label {
 	-webkit-transform: translateX(-250px);
 	        transform: translateX(-250px);
@@ -90,68 +96,3 @@ a {
 }
 /* ハンバーガーここまで */
 
-/* 電卓レイアウト */
-table{
-  margin-left: 40px;
-  width:80%;
-  height:350px;
-  border-collapse:separate;
-  border-spacing: 5px;
-  font-size: 20px;
-  font-weight: bolder;
-}
-table th,table td{
-  border-radius: 5px;
-  text-align: center;
-  padding: 10px 0;
-}
-
-table th{
-  background-color: #c79852;
-  color: white;
-  border:solid 1px #927141;
-}
-
-table td{
-  background-color: #e4d4bc;
-  border:solid 1px #af9d85;
-}
-/* 電卓レイアウトここまで */
-
-.title{
-  text-align: center;
-  margin-top: 20px;
-  font-size: 20px
-}
-.text {
-  display: inline-block;
-  background-color: #ffa300;
-  font-size: 16px;
-  color: #FFF;
-  font-weight: bold;
-  padding: 8px 10px;
-  border-radius: 4px;
-  margin-left: 10px;
-}
-
-.ichiji {
-  display: inline-block;
-  background-color: #ffa300;
-  font-size: 16px;
-  color: navy;
-  font-weight: bold;
-  padding: 8px 10px;
-  border-radius: 4px;
-  margin-left: 10px;
-}
-
-#allClear{
-  display: inline-block;
-  background-color:red;
-  font-size: 10px;
-  color:white;
-  font-weight: bold;
-  padding: 8px 10px;
-  border-radius: 4px;
-  margin-left: 300px;
-}

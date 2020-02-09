@@ -1,7 +1,8 @@
 
-@include('layouts.app')
+@extends('layouts.app')
+@section('content')
 <!-- 電卓 -->
-<table >
+<table class="cul" >
     <tr>
         <td colspan="4">
             <input id="inputLabel">
@@ -52,7 +53,7 @@
 @endif
 
 <p class="title">一時保存</p>
-<p id="allClear">全て削除</p>
+<span id="allClear">全て削除</span>
 <div class="ichiji_save"></div>
 
 
@@ -85,6 +86,5 @@ $(function(){
     });
 });
 </script>
-
-
+@endsection
 
