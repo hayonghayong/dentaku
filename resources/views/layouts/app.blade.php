@@ -23,16 +23,18 @@
 
 </head>
 <body>
-
-<div class="cp_cont">
-	<div class="cp_offcm01">
-		<input type="checkbox" id="cp_toggle01">
-		<label for="cp_toggle01"><span></span></label>
-		<div class="cp_menu">
-		<ul>
-		<li> <a href="{{url('goodsnew')}}">新規物品登録画面</a></li>
-		<li><a href="{{url('goodsall')}}">登録物品一覧</a></li>
-		<li>
+ <div id="nav-container">
+      <div class="bg"></div>
+      <div class="button" tabindex="0">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </div>
+      <div id="nav-content" tabindex="0">
+        <ul>
+        <li> <a href="{{url('goodsnew')}}">新規物品登録画面</a></li>
+        <li><a href="{{url('goodsall')}}">登録物品一覧</a></li>
+        <li>
             <a href="{{url('usersedit/'.Auth::user()->id)}}"
             onclick="event.preventDefault();
             document.getElementById('useredit').submit();">
@@ -42,7 +44,8 @@
             {{ csrf_field() }}
             </form>
         </li>
-		<li>
+        <li id="d"><a href="#">お問い合わせ</a></li>
+        <li>
             <a href="{{ route('logout') }}"
             onclick="event.preventDefault();
             document.getElementById('logout-form').submit();">
@@ -52,15 +55,14 @@
             {{ csrf_field() }}
             </form>
         </li>
-		</ul>
-		</div>
-	</div>
-	<div class="cp_contents">
-		<p class="title">{{ Auth::user()->name }} さんの便利電卓</p>
-	</div>
+        </ul>
+    </div>
+    </div>
+</div>
+<div class="cp_contents">
+	<p class="title">{{ Auth::user()->name }} さんの便利電卓</p>
+</div>
     @yield('content')
 </div>
-    
-
 </body>
 </html>
