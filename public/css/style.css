@@ -1,8 +1,9 @@
 body{
 	background: linear-gradient( #FEFEFD, #F9F6ED) fixed;
-	/* background-color:white; */
 	font-family: "Rounded Mplus 1c"; 
+	/* background-image: url('/pic.jpeg'); */
 }
+
 
 /* ハンバーガー */
 @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed:400,600');
@@ -150,16 +151,4 @@ a:active,
 a:link {
   text-decoration: none;
   outline: 0;
-}
-a {
-  color: currentColor;
-  transition: .2s ease-in-out;
-}
-h1, h2, h3, h4 {
-  margin: 0;
-}
-ul {
-  padding: 0;
-  list-style: none;
-}
 /* ハンバーガーここまで */

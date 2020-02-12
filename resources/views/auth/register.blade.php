@@ -70,6 +70,7 @@
             <button type="submit" class="danger">会員登録
             </button>
         </div>
+        <a href="{{ route('login') }}">トップページに戻る</a>
     </div>
     </form>
 </div>
