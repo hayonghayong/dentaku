@@ -1,15 +1,10 @@
 body{
 	background: linear-gradient( #FEFEFD, #F9F6ED) fixed;
-	/* background-color:white; */
 	font-family: "Rounded Mplus 1c"; 
+	/* background-image: url('/pic.jpeg'); */
 }
 /* ハンバーガーメニュー */
-*, *:before, *:after {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
-ol, ul {
+ul {
 	list-style: none;
 }
 a {
@@ -68,11 +63,8 @@ a {
 .cp_offcm01 #cp_toggle01 ~ label {
 	display: block;
 	padding: 0.5em;
-	cursor: pointer;
-	-webkit-transition: 0.5s transform;
-	        transition: 0.5s transform;
-	-webkit-transition-timing-function: cubic-bezier(.61,-0.38,.37,1.27);
-	        transition-timing-function: cubic-bezier(.61,-0.38,.37,1.27);
+	transition: 0.5s;
+	transition-timing-function:cubic-bezier(.61,-0.38,.37,1.27);
 	text-align: center;
 	color:#BAD4F3;
 }
@@ -89,6 +81,7 @@ a {
 .cp_offcm01 #cp_toggle01:checked ~ label::before {
 	content: '\f00d';
 }
+
 /* contents */
 .cp_contents {
 	color: #333333;
