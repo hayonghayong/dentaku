@@ -9,7 +9,7 @@
 <input type="text" name="name" class="form-control">
 </div>
 <div class= "content">
-<label for="weight"class="label">体重</label>
+<label for="weight"class="label">重さ</label>
 <input type="text" name="weight" class="form-control">
 </div>
 

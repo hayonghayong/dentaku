@@ -125,16 +125,17 @@
 .main{
   width:90%;
   height:70%;
-  margin-top: 30%;
+  margin-top: 20%;
   background-color:#F9F6ED;
   border-radius: 10%;
   /* box-shadow: 2px 2px 4px; */
   box-shadow: 10px 10px 15px -10px;
   text-align: center;
   margin-left: 5%;
+  padding-top: 20px;
 }
 .content{
-  margin-top: 20px;
+  margin-top: 50px;
    text-align: center;
 }
 

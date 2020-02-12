@@ -4,7 +4,7 @@
 <!-- 更新画面 -->
 <div class="main">
 <form action="{{ url('users/update') }}" method="POST">
-<div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+<div class="content">
   <label for="name" class="label">名前</label>
     <div class="col-md-6">
       <input id="name" type="text" class="form-control" name="name" value="{{$user->name}}" required autofocus>
@@ -16,7 +16,7 @@
       </div>
 </div>
 
-<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+<div class="content">
   <label for="email" class="label">メールアドレス</label>
     <div class="col-md-6">
       <input id="email" type="email" class="form-control" name="email" value="{{$user->email}}" required>
