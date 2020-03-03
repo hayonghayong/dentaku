@@ -1,0 +1,239 @@
+//-------------- フォント、カラー ----------------*/
+
+// カラー: ベースカラーはグレー、メインカラーはブルー,
+$base-color1: #585858;
+$base-color2: #8d8d8e;
+$base-color3: #d0d0d0;
+$base-color4: #f5f6f7;
+
+//UNDERLINE
+$baseu-color1: #3b3b3b;
+$baseu-color2: #333333;
+$baseu-color3: #676767;
+$baseu-color4: #a5a5a5;
+$baseu-color5: #eceaeb;
+
+$main-color1: #24bddc;
+$main-color2: #76d9e8;
+$main-color3: #c7f5f5;
+
+$main2-color1: #ff8887;
+$main2-color2: #e7bba0;
+$main2-color3: #ecceb9;
+$main2-color4: #f0d9c9;
+
+// フォント: jは日本語、eは英語
+$font-1: "Noto Serif JP", serif;
+$font-2: "Noto Serif JP", serif;
+
+$font-e1: "Ubuntu", sans-serif;
+$font-e2: "Mansalva", cursive;
+$font-e3: "Lato", sans-serif;
+$font-e4: "Montserrat", sans-serif;
+
+//-------------- 表題 ----------------*/
+
+// 各ページの表題(select.bladeなど）
+@mixin title-1 {
+  color: $main-color1;
+  font-family: $font-j1;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+//-------------- レイアウト ----------------*/
+
+//疑似要素初期化
+@mixin icon-ini {
+  content: "";
+  display: inline-block;
+}
+
+// 親要素に対して中央寄せ
+// *引数($dierction)に x, y, xy いずれかを与える(x：横方向中央寄せ y：縦方向中央寄せ xy：縦横方向中央寄せ)
+// *使用時には親要素にposition: relativeをかける
+@mixin center($direction) {
+  position: absolute;
+  @if $direction==xy {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if $direction==x {
+    left: 50%;
+    transform: translateX(-50%);
+  } @else if $direction==y {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+// 縦中央寄せにしたい子要素の親（container)に対して当てる
+// $heightにcontainerで出したい高さを入れる。
+@mixin container($height) {
+  height: $height;
+  display: flex;
+  align-items: center;
+}
+
+// 背景設定（画像など）
+// *最初に$PATH_IMGに画像のファイルまでのパスを設定
+// *引数($fileName)に画像のファイル名を与える
+// ＊mixinを当てる要素のサイズを指定すること
+@mixin background-image($fileName) {
+  $PATH_IMG: "/img/";
+  background-image: url($PATH_IMG+$fileName);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+//-------------- フォーム ----------------*/
+
+// ログイン画面に搭載のemail,password入力窓
+@mixin input-1 {
+  &::placeholder {
+    color: $base-color2;
+  }
+  width: 76%;
+  color: rgb(38, 50, 56);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: rgba(136, 126, 126, 0.04);
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  padding: 10px 20px;
+  margin-left: 46px;
+  margin-bottom: 27px;
+  &:focus {
+    border: 2px solid rgba(0, 0, 0, 0.18);
+  }
+}
+
+// select.bladeなどに搭載のgoogle風の外枠（heightとpaddingはそれぞれ調整要）
+@mixin box-1($width, $height) {
+  background-color: #fff;
+  width: $width;
+  height: $height;
+  border-radius: 1.6rem;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+  margin: 0 auto;
+}
+
+//-------------- ボタン ----------------*/
+
+// ログイン画面に搭載のログインボタン
+@mixin btn-1 {
+  cursor: pointer;
+  border-radius: 4em;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(to right, $main-color1, $main-color2);
+  border: 0;
+  font-size: 1em;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s;
+  display: block;
+  width: 40%;
+  padding: 10px 40px;
+  margin: 0 auto;
+  &:hover {
+    color: $main-color1;
+    background: white;
+    border: 1px solid $main-color1;
+  }
+}
+
+// select.bladeなどに搭載の２択ボタン
+@mixin btn-2 {
+  display: block;
+  width: 60%;
+  height: 10%;
+  color: $base-color1;
+  background: #fff;
+  text-align: center;
+  line-height: 3rem;
+  font-size: 1rem;
+  border: 1px solid $base-color1;
+  border-radius: 1.5rem;
+  transition: 0.5;
+  margin: 10% auto;
+  &:hover {
+    background: $main-color2;
+    border: 1px solid $main-color2;
+    color: #fff;
+  }
+}
+
+// aタグがあるボタン
+@mixin btn-3 {
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  a {
+    display: inline-block;
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
+      margin: 6px auto 0;
+      border-bottom: 1px solid #7c5119;
+      transition: width 0.3s ease-in-out;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+//-------------- メディアクエリ ----------------*/
+
+$breakpoints: (
+  "sp": "screen and (max-width: 480px)",
+  "tb": "screen and (max-width: 896px)",
+  "pcm": "screen and (max-width: 1024px)",
+  "pcl": "screen and (max-width: 2000px)"
+) !default;
+
+// デフォルトではmd,設定したい場合は、@include mq(sp) と記述。大きい順に記述すること
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+//-------------- メディアクエリ2 ----------------*/
+// * ex)
+//   @include media-sp {}
+//   @include media-pc {}
+// ----
+$break-point: 767px;
+
+@mixin media-sp {
+  @media screen and (max-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin media-pc {
+  @media print, screen and (min-width: $break-point + 1) {
+    @content;
+  }
+}
+
+//-------------- その他 ----------------*/
+
+// login.bladeなどに搭載のポリシー等の記述
+@mixin policy($width, $padding) {
+  width: $width;
+  background-color: $base-color3;
+  color: $base-color1;
+  line-height: 1.25rem;
+  font-size: 0.8rem;
+  padding: $padding;
+  margin: 10% auto;
+}
