@@ -60,7 +60,7 @@
     </div>
 </div>
 <div class="cp_contents">
-	<p class="title">{{ Auth::user()->name }} さんの便利電卓</p>
+	<p class="title top-title">{{ Auth::user()->name }} さんの便利電卓</p>
 </div>
     @yield('content')
 </div>

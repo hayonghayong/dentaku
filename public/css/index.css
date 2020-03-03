@@ -1,132 +1,180 @@
+/*カラー
+  pink1: #ffd8ce;
+  pink2:#ffb6b8;
+
+  blue1: #a7bfdb;
+  blue2:#d8e5f7;
+  */
+
 /* 電卓レイアウト */
-.cul{
-  margin-left: 40px;
-  width:80%;
-  height:350px;
-  border-collapse:separate;
+table {
+  width: 95vw;
+  margin: 0 auto;
+}
+
+.cul {
+  margin-top: 100px;
+  /* margin-left: 40px; */
+  width: 80%;
+  height: 350px;
+  border-collapse: separate;
   border-spacing: 5px;
-	font-size: 20px;
-	color:#A7BFDB;
-	font-weight: bolder;
+  font-size: 20px;
+  color: #a7bfdb;
+  font-weight: bolder;
 }
-#inputLabel{
-	background-color: #FFD8CE;
-	border:0;
+
+#inputLabel {
+  background-color: transparent;
+  border: 0;
+  color: #606060;
+  font-size: 32px;
+  text-align: right;
 }
-.cul th,table td{
+
+.cul th,
+table td {
   border-radius: 5px;
   text-align: center;
   padding: 10px 0;
+  background-color: transparent;
+  border: none;
 }
 
-.cul th{
-  background-color:#EAEAEA;
-  color:#EAEAEA;
-  border:solid 1px #FF2E63;
+.cul td {
+  background-color: #bebebe;
+  color: #f9f6ed;
 }
 
-.cul td{
-  background-color: #FFD8CE;
-  border:solid 1px  #FFB6B8;
+.cul tr .operator {
+  background-color: #d8e5f7;
+  border: none;
+  color: #585858;
 }
+.cul tr .ac {
+  background-color: gray;
+  border: none;
+  color: #f9f6ed;
+}
+
+.cul tr td button {
+  border: none;
+  background-color: transparent;
+}
+
+.cul .total {
+  background-color: #f9f6ed;
+  border: 1px solid #606060;
+}
+
+.ichiji_save {
+  border-radius: 8px;
+  color: #606060;
+  padding: 5px 10px;
+  margin-left: 10px;
+}
+
 /* 電卓レイアウトここまで */
 
 /* 各ページタイトル */
-.title{
+.title {
   text-align: center;
   margin-top: 5px;
-	font-size: 20px;
-	color:#A7BFDB;
-	font-weight: bolder;
+  font-size: 20px;
+  color: #a7bfdb;
+  font-weight: bolder;
+}
+.top-title {
+  font-size: 28px;
 }
 
 /* ボタン関連 */
 .text {
   display: inline-block;
-  background-color:#D8E5F7;
-  color:#FFB6B8;
+  background-color: #d8e5f7;
+  color: #ffb6b8;
   font-size: 16px;
   font-weight: bold;
   padding: 8px 10px;
   border-radius: 4px;
   margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 .ichiji {
   display: inline-block;
-  background-color:#FFD8CE;
+  background-color: #ffd8ce;
   font-size: 16px;
-  color:#BAD4F3;
+  color: #bad4f3;
   font-weight: bold;
   padding: 8px 10px;
   border-radius: 4px;
   margin-left: 10px;
 }
 
-#allClear{
+#allClear {
   display: inline-block;
-  background-color:#FFD8CE;
+  background-color: #ffd8ce;
   font-size: 10px;
-  color:#FFB6B8;
+  color: #ffb6b8;
   font-weight: bold;
   padding: 8px 10px;
   border-radius: 4px;
   margin-left: 300px;
 }
 
-.danger{
+.danger {
   display: inline-block;
   text-align: center;
-  background-color:#FFD8CE;
-  border:#FFD8CE;
+  background-color: #ffd8ce;
+  border: #ffd8ce;
   font-size: 16px;
-  color:#FFB6B8;
+  color: #ffb6b8;
   font-weight: bold;
   padding: 8px 10px;
   border-radius: 4px;
-  position: relative;
+  /* position: relative; */
 }
 
-.update{
+.update {
   display: inline-block;
   text-align: center;
-  background-color:#FFD8CE;
-  border:#FFD8CE;
+  background-color: #ffd8ce;
+  border: #ffd8ce;
   font-size: 16px;
-  color:#BAD4F3;
+  color: #bad4f3;
   font-weight: bold;
   padding: 8px 10px;
   border-radius: 4px;
-  position: relative;
+  /* position: relative; */
 }
 /* ボタン関連ここまで */
 
-
 /* label関連 */
-.label{
-  color:#BAD4F3;
+.label {
+  color: #bad4f3;
   font-size: 20px;
 }
 
 /* input関連 */
-.form-control{
-  border:2px solid #D8E5F7;
-  width:60%;
+.form-control {
+  border: 2px solid #d8e5f7;
+  width: 60%;
   margin-left: 20%;
 }
 
 .form-control:focus {
-    box-shadow: 0 0 5px  #FFD8CE;
-    border: 2px solid #FFF !important;
-    outline: 0;
+  box-shadow: 0 0 5px #ffd8ce;
+  border: 2px solid #fff !important;
+  outline: 0;
 }
 
 /* goodsall,userseditのコンテンツ */
-.main{
-  width:90%;
-  height:70%;
+.main {
+  width: 90%;
+  height: 70%;
   margin-top: 20%;
-  background-color:#F9F6ED;
+  background-color: #f9f6ed;
   border-radius: 10%;
   /* box-shadow: 2px 2px 4px; */
   box-shadow: 10px 10px 15px -10px;
@@ -134,19 +182,18 @@
   margin-left: 5%;
   padding-top: 20px;
 }
-.content{
+.content {
   margin-top: 50px;
-   text-align: center;
+  text-align: center;
 }
 
-
 /* goodsallのテキスト */
-.allText{
+.allText {
   font-size: 20px;
-  color:#BAD4F3;
+  color: #bad4f3;
   font-weight: bold;
 }
 
-#table{
-  margin-top: 30%;
+#table {
+  margin-top: 10%;
 }

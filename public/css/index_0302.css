@@ -1,0 +1,152 @@
+/* 電卓レイアウト */
+.cul{
+  margin-left: 40px;
+  width:80%;
+  height:350px;
+  border-collapse:separate;
+  border-spacing: 5px;
+	font-size: 20px;
+	color:#A7BFDB;
+	font-weight: bolder;
+}
+#inputLabel{
+	background-color: #FFD8CE;
+	border:0;
+}
+.cul th,table td{
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.cul th{
+  background-color:#EAEAEA;
+  color:#EAEAEA;
+  border:solid 1px #FF2E63;
+}
+
+.cul td{
+  background-color: #FFD8CE;
+  border:solid 1px  #FFB6B8;
+}
+/* 電卓レイアウトここまで */
+
+/* 各ページタイトル */
+.title{
+  text-align: center;
+  margin-top: 5px;
+	font-size: 20px;
+	color:#A7BFDB;
+	font-weight: bolder;
+}
+
+/* ボタン関連 */
+.text {
+  display: inline-block;
+  background-color:#D8E5F7;
+  color:#FFB6B8;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 10px;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+.ichiji {
+  display: inline-block;
+  background-color:#FFD8CE;
+  font-size: 16px;
+  color:#BAD4F3;
+  font-weight: bold;
+  padding: 8px 10px;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+#allClear{
+  display: inline-block;
+  background-color:#FFD8CE;
+  font-size: 10px;
+  color:#FFB6B8;
+  font-weight: bold;
+  padding: 8px 10px;
+  border-radius: 4px;
+  margin-left: 300px;
+}
+
+.danger{
+  display: inline-block;
+  text-align: center;
+  background-color:#FFD8CE;
+  border:#FFD8CE;
+  font-size: 16px;
+  color:#FFB6B8;
+  font-weight: bold;
+  padding: 8px 10px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.update{
+  display: inline-block;
+  text-align: center;
+  background-color:#FFD8CE;
+  border:#FFD8CE;
+  font-size: 16px;
+  color:#BAD4F3;
+  font-weight: bold;
+  padding: 8px 10px;
+  border-radius: 4px;
+  position: relative;
+}
+/* ボタン関連ここまで */
+
+
+/* label関連 */
+.label{
+  color:#BAD4F3;
+  font-size: 20px;
+}
+
+/* input関連 */
+.form-control{
+  border:2px solid #D8E5F7;
+  width:60%;
+  margin-left: 20%;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 5px  #FFD8CE;
+    border: 2px solid #FFF !important;
+    outline: 0;
+}
+
+/* goodsall,userseditのコンテンツ */
+.main{
+  width:90%;
+  height:70%;
+  margin-top: 20%;
+  background-color:#F9F6ED;
+  border-radius: 10%;
+  /* box-shadow: 2px 2px 4px; */
+  box-shadow: 10px 10px 15px -10px;
+  text-align: center;
+  margin-left: 5%;
+  padding-top: 20px;
+}
+.content{
+  margin-top: 50px;
+   text-align: center;
+}
+
+
+/* goodsallのテキスト */
+.allText{
+  font-size: 20px;
+  color:#BAD4F3;
+  font-weight: bold;
+}
+
+#table{
+  margin-top: 30%;
+}

@@ -4,39 +4,39 @@
 <!-- 電卓 -->
 <table class="cul" >
     <tr>
-        <td colspan="4">
+        <td colspan="4" class="total">
             <input id="inputLabel">
         </td>
     </tr>
         <tr>
-            <td colspan="3">
+            <td colspan="3" class="ac">
             <button>AC</button>
-            <input type=submit id="ichiji_save" value="一時保存">
+            <input type=submit id="ichiji_save" class="ichiji_save" value="一時保存">
             </td>
-            <td><button>/</button></td>
+            <td class="operator"><button>/</button></td>
         </tr>
         <tr>
             <td><button>7</button></td>
             <td><button>8</button></td>
             <td><button>9</button></td>
-            <td><button>*</button></td>
+            <td class="operator"><button>*</button></td>
         </tr>
         <tr>
             <td><button>4</button></td>
             <td><button>5</button></td>
             <td><button>6</button></td>
-            <td><button>-</button></td>
+            <td class="operator"><button>-</button></td>
         </tr>
         <tr>
             <td><button>1</button></td>
             <td><button>2</button></td>
             <td><button>3</button></td>
-            <td><button>+</button></td>
+            <td class="operator"><button>+</button></td>
         </tr>
         <tr>
             <td colspan="2"><button>0</button></td>
             <td><button>.</button></td>
-            <td><button>=</button></td>
+            <td class="operator"><button>=</button></td>
         </tr>
     </table>
 </div>
