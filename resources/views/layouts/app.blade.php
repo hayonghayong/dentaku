@@ -55,12 +55,15 @@
             {{ csrf_field() }}
             </form>
         </li>
+        <li>
+             <img src="/img/01.png" alt="" width="100" height="50">
+        </li>
         </ul>
     </div>
     </div>
 </div>
 <div class="cp_contents">
-	<p class="title top-title">{{ Auth::user()->name }} さんの便利電卓</p>
+	<p class="title top-title" style="font-size:20px">{{ Auth::user()->name }} さんの便利電卓</p>
 </div>
     @yield('content')
 </div>

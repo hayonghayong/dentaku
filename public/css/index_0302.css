@@ -7,7 +7,7 @@
   border-spacing: 5px;
 	font-size: 20px;
 	color:#A7BFDB;
-	font-weight: bolder;
+  font-weight: bolder;
 }
 #inputLabel{
 	background-color: #FFD8CE;
@@ -44,7 +44,7 @@
 .text {
   display: inline-block;
   background-color:#D8E5F7;
-  color:#FFB6B8;
+  color:white;
   font-size: 16px;
   font-weight: bold;
   padding: 8px 10px;
@@ -65,9 +65,10 @@
 
 #allClear{
   display: inline-block;
-  background-color:#FFD8CE;
+  background-color:white;
   font-size: 10px;
-  color:#FFB6B8;
+  color:#bad4f3;
+  border: #bad4f3;
   font-weight: bold;
   padding: 8px 10px;
   border-radius: 4px;
@@ -77,10 +78,10 @@
 .danger{
   display: inline-block;
   text-align: center;
-  background-color:#FFD8CE;
-  border:#FFD8CE;
+  background-color:white;
+  border:#bad4f3;;
   font-size: 16px;
-  color:#FFB6B8;
+  color:#bad4f3;
   font-weight: bold;
   padding: 8px 10px;
   border-radius: 4px;
@@ -90,10 +91,10 @@
 .update{
   display: inline-block;
   text-align: center;
-  background-color:#FFD8CE;
-  border:#FFD8CE;
+  background-color:#bad4f3;
+  border:#bad4f3;
   font-size: 16px;
-  color:#BAD4F3;
+  color:white;
   font-weight: bold;
   padding: 8px 10px;
   border-radius: 4px;
@@ -116,7 +117,7 @@
 }
 
 .form-control:focus {
-    box-shadow: 0 0 5px  #FFD8CE;
+    box-shadow: 0 0 5px  white;
     border: 2px solid #FFF !important;
     outline: 0;
 }

@@ -92,7 +92,7 @@ table td {
 .text {
   display: inline-block;
   background-color: #d8e5f7;
-  color: #ffb6b8;
+  color: white;
   font-size: 16px;
   font-weight: bold;
   padding: 8px 10px;
@@ -114,9 +114,10 @@ table td {
 
 #allClear {
   display: inline-block;
-  background-color: #ffd8ce;
+  background-color: white;
+  border: #bad4f3;
   font-size: 10px;
-  color: #ffb6b8;
+  color: #bad4f3;
   font-weight: bold;
   padding: 8px 10px;
   border-radius: 4px;
@@ -126,10 +127,10 @@ table td {
 .danger {
   display: inline-block;
   text-align: center;
-  background-color: #ffd8ce;
-  border: #ffd8ce;
+  background-color:white;
+  border:#bad4f3;
   font-size: 16px;
-  color: #ffb6b8;
+  color:#bad4f3;
   font-weight: bold;
   padding: 8px 10px;
   border-radius: 4px;
@@ -139,10 +140,10 @@ table td {
 .update {
   display: inline-block;
   text-align: center;
-  background-color: #ffd8ce;
-  border: #ffd8ce;
+  background-color:#bad4f3;
+  border: #bad4f3;
   font-size: 16px;
-  color: #bad4f3;
+  color: white;
   font-weight: bold;
   padding: 8px 10px;
   border-radius: 4px;
@@ -164,7 +165,7 @@ table td {
 }
 
 .form-control:focus {
-  box-shadow: 0 0 5px #ffd8ce;
+  box-shadow: 0 0 5px white;
   border: 2px solid #fff !important;
   outline: 0;
 }
