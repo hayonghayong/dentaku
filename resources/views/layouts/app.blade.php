@@ -55,12 +55,15 @@
             {{ csrf_field() }}
             </form>
         </li>
+        <li>
+            <a href="https://nsmart.work/" target = "_blank" ><img src="/img/01.png" alt="" width="100" height="50"></a>
+        </li>
         </ul>
     </div>
     </div>
 </div>
 <div class="cp_contents">
-	<p class="title top-title">{{ Auth::user()->name }} さんの便利電卓</p>
+	<p class="title top-title" style="font-size:20px">{{ Auth::user()->name }} さんの便利電卓</p>
 </div>
     @yield('content')
 </div>

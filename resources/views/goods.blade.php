@@ -2,7 +2,7 @@
 @extends('layouts.app')
 @section('content')
 <!-- 電卓 -->
-<table class="cul" >
+<table class="cul" style="margin-top:20px;" >
     <tr>
         <td colspan="4" class="total">
             <input id="inputLabel">
