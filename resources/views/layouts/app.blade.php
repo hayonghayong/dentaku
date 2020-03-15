@@ -56,7 +56,7 @@
             </form>
         </li>
         <li>
-             <img src="/img/01.png" alt="" width="100" height="50">
+            <a href="https://nsmart.work/" target = "_blank" ><img src="/img/01.png" alt="" width="100" height="50"></a>
         </li>
         </ul>
     </div>
